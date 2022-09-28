@@ -39,7 +39,7 @@ def art_detail(request,pk):
 
     elif request.method =='PUT':
 
-        serializers=Artserializers(Art,data=request.data)
+        serializers=Artserializers(art,data=request.data)
         if serializers.is_valid():
              serializers.save()
              return Response(serializers.data)
